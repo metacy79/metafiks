@@ -1,0 +1,9 @@
+FROM docker.io/blackarchlinux/blackarch:latest
+
+# Upgrade system
+RUN pacman -Syu --noconfirm
+
+# Install metafiks from official repository
+RUN pacman -Sy metafiks --noconfirm
+
+CMD ["metafiks"]
